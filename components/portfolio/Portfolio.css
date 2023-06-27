@@ -1,0 +1,155 @@
+.main_container {
+    display: flex;
+    justify-content: center;
+    margin-left: 20em;
+}
+
+.origin_container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.project_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 42em;
+    margin-top: 5em;
+}
+
+.image {
+    object-fit: cover;
+    border: 2px solid rgb(48, 47, 47);
+    border-radius: 3px;
+    width: 10em;
+    height: 5em
+}
+
+.p_container {
+    display: flex;
+    column-gap: 2em;
+    justify-content: start;
+    padding: 22px;
+    margin-bottom: 2em;
+    align-items: center;
+    cursor: pointer;;
+    animation: intro 1s ease-in;
+}
+
+.add_project {
+    height: 3em;
+    width: 3em;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    margin: 3em;
+    cursor: pointer;
+    right: 0;
+    animation: rotate 1s ease-in;
+    animation: rotate2 1s ease-in
+}
+
+.main_text {
+    width: 27em;
+}
+
+.translate-out-project  {
+    transform: translateX(-10em);
+    transition: transform 0.5s ease;
+}
+
+.translate-in-project {
+    transform: translateX(0px);
+    transition: transform 0.5s ease;
+}
+
+.p_container:hover{
+    background-color: rgba(0, 0, 0, 0.1); /* Sets a translucent black background */
+
+  }
+
+.p_container:hover .arrow_up {
+    animation: arrowup 0.4s ease-in forwards;
+}
+
+  
+.p_container:hover .image {
+    animation: borderAnimation 2s linear infinite;
+}
+
+.p_container:hover .stacks {
+    animation: stackAnimation 5s linear infinite;
+}
+
+.stack_container {
+    display: flex;
+}
+
+.stacks {
+    display: flex;
+    flex-direction: row;
+    margin:5px;
+    justify-content: center;
+    align-items: center;
+    color: #47ffed;
+    background-color: rgba(79, 209, 197,0.3);
+    padding: 2px 8px 2px 8px;
+    border-radius: 100px;
+}
+
+Link {
+    background-color: white;
+    color: inherit;
+    text-decoration: none;
+}
+@keyframes rotate1 {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(180deg)
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotate(180deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes stackAnimation {
+    0% {
+        background: rgba(79, 209, 197,0.3);;
+    }
+    50% {
+        background: rgba(79, 209, 197,0.5);;
+    }
+    100% {
+        background: rgba(79, 209, 197,0.3);;
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+      border-color: rgb(48, 47, 47);
+    }
+    50% {
+      border-color: rgb(95, 95, 95);
+    }
+    100% {
+      border-color: rgb(48, 47, 47);
+    }
+  }
+
+  @keyframes arrowup {
+    from {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(10px, -10px); /* Adjust the transform values to move the arrow upwards */
+    }
+  }
