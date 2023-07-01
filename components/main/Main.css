@@ -178,12 +178,11 @@ body {
 }
 
 .text-container {
-margin-left: 2em;
+  margin-left: 2em;
 }
 
 .text_intro {
-
-animation: intro 1s ease-out;
+  animation: intro 1s ease-out;
 }
 
 @keyframes intro {
@@ -199,7 +198,6 @@ from {
 
 }
 
-
 .main_text {
   width: 30em;
   color: rgb(155, 152, 152);
@@ -208,24 +206,26 @@ from {
 .icons {
   display: flex;
   gap: 15px;
-  
 
-  .twitter {
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      animation: intro 1s ease-in forwards;
-  }
-  .linkedin {
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      animation: intro 1.2s ease-in forwards;
-  }
-  .discord {
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      animation: intro 1.5s ease-in forwards;
-  }
+
+.twitter, .linkedin, .discord, .github {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    
+}
+.twitter {
+    animation: intro 1s ease-in forwards;
+}
+.linkedin {
+    animation: intro 1.2s ease-in forwards;
+}
+.discord {
+    animation: intro 1.5s ease-in forwards;
+}
+.github {
+    animation: intro 1.7s ease-in forwards;
+}
+
 }
