@@ -1,0 +1,26 @@
+.main_navbar_container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.second_navbar_container {
+    margin-top: 3em;
+    background: black;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    color: white;
+}
+
+.navbar_icon {
+    color: white;
+    width: 30px;
+    height: 30px;
+}

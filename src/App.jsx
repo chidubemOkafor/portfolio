@@ -1,5 +1,6 @@
 import './App.css'
 import Main from "../components/main/Main"
+import Navbar from "../components/navbar/Navbar"
 import Sidebar from '../components/sidebar/Sidebar'
 import About from "../components/about/About"
 import {useState,useEffect} from "react"
@@ -25,6 +26,7 @@ function App() {
     {!loading ? (
     <div>
     <Router>
+      <Navbar/>
     <Sidebar 
         dark = {dark} 
         minimize = {minimize}

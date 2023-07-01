@@ -6,6 +6,7 @@ import {MdToggleOff,MdToggleOn} from "react-icons/md"
 import {useState} from "react"
 
 function Sidebar(prop) {
+  const year = new Date().getFullYear()
   const toggleMinimize = () => {prop.setMinimize(!prop.minimize)}
   const text_buttons = {
     color: prop.light ? "black" : "white"
@@ -40,7 +41,7 @@ const light_mode = () => {
             </div>
         </div>
         <div>
-          <p className='copyright'>Copyright © 2023 chidubem okafor. All Rights Reserved</p>
+          <p className='copyright'>Copyright © {year} chidubem okafor. All Rights Reserved</p>
        </div>
     </div>
     <div className='minimize' style={{marginLeft: prop.margin ? "19em" : "0"}}>
