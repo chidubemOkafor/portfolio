@@ -48,14 +48,13 @@ function Main(prop) {
                   <a href='https://github.com/chidubemOkafor'><AiFillGithub className='github'/></a>
                 </div>
                 <div className='stack'>
-                  <p>Tech Stack  |</p>
+                  <p>stack |</p>
                     <div className='individual_stack'>
-                    <img src={html} />
+                    <img src={html}/>
                     <img src={css}/>
                     <img src={javascriot}/>
                     <img src={react}/>
                     <img src={python}/>
-                    <img src={rust}/>
                     <img src={node}/>
                     <img className='solidity' src={"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Solidity_logo.svg/579px-Solidity_logo.svg.png"}/>
                   </div>
@@ -67,7 +66,7 @@ function Main(prop) {
                 </div>
             </div>
             <audio
-            src = "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3"
+              src = "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3"
             >
             </audio>
         </div>

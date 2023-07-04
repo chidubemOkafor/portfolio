@@ -7,7 +7,7 @@
 
 .second_navbar_container {
     margin-top: 1em;
-    background: rgb(0, 0, 0);
+    background-color: #1a1a1a;
     padding: 10px 15px 10px 15px;
     border-radius: 10px;
 }
@@ -28,4 +28,14 @@
 
 .navbar_icon:hover {
    background-color: red;
+}
+
+.translate-out-main {
+  transform: translateX(0.5em);
+  transition: transform 0.5s ease;
+}
+
+.translate-in-main {
+  transform: translateX(10em);
+  transition: transform 0.5s ease;
 }

@@ -26,7 +26,9 @@ function App() {
     {!loading ? (
     <div>
     <Router>
-      <Navbar/>
+    <Navbar
+        minimize = {minimize}
+    />
     <Sidebar 
         dark = {dark} 
         minimize = {minimize}

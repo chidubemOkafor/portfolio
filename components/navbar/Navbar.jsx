@@ -5,9 +5,9 @@ import {MdWorkOutline} from "react-icons/md"
 import {RiContactsLine} from "react-icons/ri"
 import "./Navbar.css"
 
-const Navbar = () => {
+const Navbar = (prop) => {
   return (
-    <div className='main_navbar_container'>
+    <div className={`main_navbar_container ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
         <div className='second_navbar_container'>
             <div className='navbar_container'>
                 <GoHome className='navbar_icon'/>
