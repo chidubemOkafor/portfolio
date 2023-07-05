@@ -9,13 +9,13 @@
     margin-top: 1em;
     background-color: #1a1a1a;
     padding: 10px 15px 10px 15px;
-    border-radius: 10px;
+
 }
 
 .navbar_container {
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
     color: white;
     cursor: pointer;
 }

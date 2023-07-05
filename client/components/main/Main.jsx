@@ -21,20 +21,10 @@ function Main(prop) {
     color: prop.light ? "black" : "white"
 }
   return (
-    <div className={`origin ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
-    <div className='BoD'>
+    <div className={`origin `}>
     <div className='MAIN_container'>
         <div className='second_main_container'>
-          <div className='container'>
-            <div className='box'>
-              <div className='spin-container'>
-                <div className='shape'>
-                  <div className='bd'></div>
-                </div>
-              </div>  
-            </div>
-          </div>
-            
+          <div className='container'></div>
             <div className='text-container'>
               <div className='text_intro'>
                 <h1 style={text_buttons}>OKAFOR CHIDUBEM</h1>
@@ -72,7 +62,6 @@ function Main(prop) {
         </div>
       </div>
     </div>
-  </div>
   )
 }
 
