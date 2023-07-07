@@ -1,4 +1,5 @@
 import React from 'react'
+import "./About.css"
 import {MdDownload} from "react-icons/md"
 
 const About = (prop) => {

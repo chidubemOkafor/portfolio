@@ -61,10 +61,6 @@ function Main(prop) {
                   {!connected ? <button onClick={connectWallet}>Connect Mallet </button>: <button>Mint cv</button>}
                 </div>
             </div>
-            <audio
-              src = "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3"
-            >
-            </audio>
         </div>
       </div>
     </div>
