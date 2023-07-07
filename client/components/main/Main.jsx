@@ -3,7 +3,7 @@ import {AiOutlineTwitter,AiFillGithub} from "react-icons/ai"
 import {BsLinkedin,BsDiscord} from "react-icons/bs"
 import {connectWallet} from "../useConnectWallet.js"
 import css from "../../src/assets/icons/css.png"
-import react from "../../src/assets/icons/react.gif"
+import react from "../../src/assets/icons/React.gif"
 import python from "../../src/assets/icons/python.png"
 import rust from "../../src/assets/icons/rust.png"
 import node from "../../src/assets/icons/node.png"
@@ -30,7 +30,10 @@ function Main(prop) {
           </div>
             <div className='text-container'>
               <div className='text_intro'>
-                <h1 style={text_buttons}>OKAFOR CHIDUBEM</h1>
+                <div className='names'>
+                  <h1 style={text_buttons}>CHIDUBEM</h1> 
+                  <h1 className='surname'>OKAFOR</h1>
+                </div>
                 <p className='main_text'>I am a web and blockchain developer, passionate about creating innovative digital solutions. With expertise in web development and blockchain technology.</p>
               </div>
                 
