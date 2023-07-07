@@ -34,10 +34,10 @@ const light_mode = () => {
         <div className='side_bar_container'>
             <div className='nav_container'>
                 <h4 className='nav_header' style={{color: prop.light ? "black" : "white"}}>PORTFOLIO</h4>
-                <p className='nav'><Link to="/">Home</Link></p>
-                <p className='nav'><Link to="/about">About</Link></p>
-                <p className='nav'><Link to="/portfolio">Projects</Link></p>
-                <p className='nav'><Link to="/contact">contact</Link></p>
+                <p className='nav'><Link className='link' to="/">Home</Link></p>
+                <p className='nav'><Link className='link' to="/about">About</Link></p>
+                <p className='nav'><Link className='link' to="/portfolio">Projects</Link></p>
+                <p className='nav'><Link className='link' to="/contact">contact</Link></p>
             </div>
         </div>
         <div>

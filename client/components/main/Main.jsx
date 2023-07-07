@@ -11,7 +11,7 @@ import html from "../../src/assets/icons/html.png"
 import javascriot from "../../src/assets/icons/javascript.png"
 import ReactAudioPlayer from "react-audio-player"
 import './Main.css'
-
+import {MdDownload} from "react-icons/md"
 
 function Main(prop) {
   // const wallet = new Wallet()
@@ -21,10 +21,13 @@ function Main(prop) {
     color: prop.light ? "black" : "white"
 }
   return (
-    <div className={`origin `}>
+    <div className={`origin ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
     <div className='MAIN_container'>
         <div className='second_main_container'>
-          <div className='container'></div>
+          <div className='container'>
+            <div className='circle_one'/>
+            <div className='circle_two'/>
+          </div>
             <div className='text-container'>
               <div className='text_intro'>
                 <h1 style={text_buttons}>OKAFOR CHIDUBEM</h1>
@@ -32,10 +35,10 @@ function Main(prop) {
               </div>
                 
                 <div className='icons' style={text_buttons}>
-                  <a href='https://twitter.com/Okaforchidex7'><AiOutlineTwitter className='twitter'/></a>
-                  <a href='https://www.linkedin.com/in/chidubem-okafor-51648922b'><BsLinkedin className='linkedin'/></a>
-                  <a href='https://discord.gg/9sMNeDZ7'><BsDiscord className='discord'/></a>
-                  <a href='https://github.com/chidubemOkafor'><AiFillGithub className='github'/></a>
+                  <a href='https://twitter.com/Okaforchidex7'><AiOutlineTwitter className='navbar_icon'/></a>
+                  <a href='https://www.linkedin.com/in/chidubem-okafor-51648922b'><BsLinkedin className='navbar_icon'/></a>
+                  <a href='https://discord.gg/9sMNeDZ7'><BsDiscord className='navbar_icon'/></a>
+                  <a href='https://github.com/chidubemOkafor'><AiFillGithub className='navbar_icon'/></a>
                 </div>
                 <div className='stack'>
                   <p>stack |</p>
@@ -50,9 +53,9 @@ function Main(prop) {
                   </div>
                 </div>
                 <div className='button_div'>
-                  <button>download cv</button>
-                  <button>hire me</button>
-                  {!connected ? <button onClick={connectWallet}>connect wallet</button>: <button>mint cv</button>}
+                  <button className='down_btn'>Download cv <MdDownload className='MdDownload'/></button>
+                  <button>Hire me</button>
+                  {!connected ? <button onClick={connectWallet}>Connect Mallet </button>: <button>Mint cv</button>}
                 </div>
             </div>
             <audio

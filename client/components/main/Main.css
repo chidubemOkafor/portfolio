@@ -1,20 +1,3 @@
-/* 
-
-.image {
-    border-radius: 20% 40% 40% 60% / 10% 30% 50% 70%;
-    background-image: url("https://media.licdn.com/dms/image/D4D03AQGmjVgdB8hgsw/profile-displayphoto-shrink_400_400/0/1676415517689?e=1692835200&v=beta&t=-DetzRzoigad0vq8XaLKbehx-7J6t05Osg_ysAIfByo");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 18em;
-    height: 18em;
-    margin: 50px;
-    width: 100%;
-    height: 100%;
-    animation: spin 12s ease-in-out infinite alternate;
-    position: relative;
-    
-  } */
 .music_note {
     height: 50px;
     width: 50px;
@@ -40,23 +23,15 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
+
 }
 
 .MAIN_container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
- .translate-out-main {
-  transform: translateX(0.5em);
-  transition: transform 0.5s ease;
 }
-
-.translate-in-main {
-  transform: translateX(10em);
-  transition: transform 0.5s ease;
-} 
 
 .second_main_container {
   display: flex;
@@ -82,6 +57,34 @@
   height: 35px;
 }
 
+.translate-out-main {
+  transform: translateX(1em);
+  transition: transform 0.5s ease;
+}
+
+.MdDownload {
+  background-color: rgba(79, 209, 197,0.6);
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.down_btn {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.translate-in-main {
+  transform: translateX(10em);
+  transition: transform 0.5s ease;
+}
+
+.navbar_icon {
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
 body {
   overflow-x: hidden;
   background-color:rgb(32, 32, 35)
@@ -92,7 +95,7 @@ body {
   flex-direction: row;
   gap: 10px
 }
-/*  */
+
 .container {
   height: 20em;
   border-radius: 100%;
@@ -102,8 +105,8 @@ body {
   justify-content: center;
   overflow: hidden;
   background: url("https://media.licdn.com/dms/image/D4D03AQGmjVgdB8hgsw/profile-displayphoto-shrink_400_400/0/1676415517689?e=1692835200&v=beta&t=-DetzRzoigad0vq8XaLKbehx-7J6t05Osg_ysAIfByo");
+  border: 2px solid white;
 }
-
 
 @keyframes morph {
   0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
@@ -147,13 +150,9 @@ from {
   display: flex;
   gap: 15px;
 
-
-.twitter, .linkedin, .discord, .github {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    color: white;
-    
+.icon {
+  height: 30px;
+  width: 30px;
 }
 .twitter {
     animation: intro 1s ease-in forwards;

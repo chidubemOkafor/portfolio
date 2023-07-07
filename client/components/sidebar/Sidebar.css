@@ -26,12 +26,15 @@ h4 {
     font-size: 30px;
 }
 
-p {
-    color: #a1a0a0 !important;
+.link {
+    color: #a1a0a0;
+}
+
+.link:hover {
+    color: rgba(79, 209, 197);
 }
 
 .nav {
-    color: #a1a0a0 !important;
     font-weight: bold;
     font-size: 16px;
     margin: 0;

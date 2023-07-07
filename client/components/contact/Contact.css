@@ -1,0 +1,69 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.freeform {
+    padding: 1em;
+    border: none;
+    border-radius: 2px;
+}
+
+.email, .number {
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+
+.icon_max {
+    height: 40px;
+    width:40px;
+    color: rgba(79, 209, 197)
+}
+
+.con_header {
+    line-height: 0;
+}
+
+.addressed > .icons {
+    padding-top: 30px;
+}
+
+.contact_div {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    animation: intro 1s ease-in;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.con_text {
+    line-height: 0;
+}
+
+input {
+    padding: 1em;
+    border: none;
+    border-radius: 2px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.freeform:focus {
+    outline: none;
+}

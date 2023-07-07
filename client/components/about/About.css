@@ -1,49 +1,56 @@
-.origin_about {
+.about_container {
     display: flex;
     justify-content: center;
- 
-    width: 100em;
-}
-
-.paragraph_container {
-    display: flex;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
-    width: 60em;
+    gap: 5em;
+    animation: intro 1s ease-in;
+}
+
+.blue_p {
+    color: rgba(79, 209, 197)
+}
+.green_p {
+    color: rgba(79, 209, 197);
+}
+.about_personal_info {
+    line-height: 0;
+}
+
+.number_block {
+    padding: 1.5em;
+    margin: 0.4em;
+    background-color: #1a1a1a;
+    line-height: 0;
+    width: 7em;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0,0.3);
+}
+
+.number_block_classic {
+    width: 28.5em;
+    padding: 1.5em;
+    margin: 0.5em;
+    background-color: #1a1a1a;
+    line-height: 0;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0,0.3);
+}
+
+
+.P {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 2px;
 }
 
-.paragraph {
-     width: 55em;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     overflow: hidden;
-     gap: 3em;
+.green_p {
+    font-size: 3em;
 }
-.text_about_div {
+
+.inner_personal_block {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.paragraph p {
-    width: 25em;
-    height: 18em;
 }
 
-.paragraph .div {
-    width:23em;
-    height:26em;
-    background-color: purple;
-    background: url("https://media.licdn.com/dms/image/D4D03AQGmjVgdB8hgsw/profile-displayphoto-shrink_400_400/0/1676415517689?e=1692835200&v=beta&t=-DetzRzoigad0vq8XaLKbehx-7J6t05Osg_ysAIfByo");
-    background-size: 100%;
-    border-radius: 10px;
-    background-repeat: no-repeat;
+.about_personal_info_3 {
+    gap:2;
 }
-
-.about_background:hover .div {
-    bottom: 0;
-    height: 100%;
-    animation: shows_stacks 2s ease-in
-}
-

@@ -1,85 +1,36 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './About.css';
-import { AiOutlineTwitter } from 'react-icons/ai';
-import { BsLinkedin, BsDiscord } from 'react-icons/bs';
-import typing from '../../src/assets/audio/quick-mechanical-keyboard-14391.mp3';
+import React from 'react'
+import {MdDownload} from "react-icons/md"
 
 const About = (prop) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(null);
-
-  const [text, setText] = useState('');
-  const textElement =
-    "C*hidubem Okafor is a blockchain and software developer skilled in Solidity, CSS, HTML, Rust, and Python. Currently pursuing Electrical/Electronics Engineering at Anambra State University. Actively participated in Chainlink hackathons, expanding expertise in blockchain development. Enthusiastic about learning new technologies and staying up-to-date with industry trends. Also an avid anime enthusiast. Let's connect and embark on this exciting technological journey together!";
-  const typingSpeed = 10;
-
-  useEffect(() => {
-    const audioElement = audioRef.current;
-
-    const handleAudioEnded = () => {
-      audioElement.load(); // Reset and reload the audio
-      audioElement.play(); // Start playing the audio again
-    };
-
-    audioElement.addEventListener('ended', handleAudioEnded);
-
-    return () => {
-      audioElement.removeEventListener('ended', handleAudioEnded);
-    };
-  }, []);
-
-  useEffect(() => {
-    const audioElement = audioRef.current;
-
-    if (isPlaying) {
-      audioElement.play();
-    } else {
-      audioElement.pause();
-      audioElement.load(); // Reset and reload the audio
-    }
-
-    let textIndex = 0;
-
-    const textChar = () => {
-      if (textIndex < textElement.length) {
-        setText(prevText => prevText + textElement.charAt(textIndex));
-        textIndex++;
-      }
-    };
-
-    const typingInterval = setInterval(textChar, typingSpeed);
-    setIsPlaying(false)
-
-    return () => {
-      clearInterval(typingInterval);
-    };
-  }, [isPlaying]);
-
-  useEffect(() => {
-    setIsPlaying(true);
-  }, []);
-
   return (
-  <div className='origin_about'>
-    <div className={`paragraph_container ${prop.minimize ? "translate-out-project " : "translate-in-project"}`}>
-      <audio ref={audioRef} src={typing} />
-      <div className="paragraph">
-        <div className="div">
-            <div className='about_background'></div>
-        </div>
-        <div className="text_about_div">
-          <h1>Who am I?</h1>
-          <p>{text}</p>
-          <div className="icons">
-            <AiOutlineTwitter className="twitter" />
-            <BsLinkedin className="linkedin" />
-            <BsDiscord className="discord" />
+    <div className={`origin ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
+      <div className='MAIN_container'>
+        <div className='second_main_container'>
+          <div className='about_container'>
+            <div className='about_personal_info'>
+              <h4>PERSONAL INFO</h4>
+              <p className='P'><p className='blue_p'>Name:</p>Chidubem Okafor</p>
+              <p className='P'><p className='blue_p'>gender:</p>Male</p>
+            {/* </div>
+            <div className='about_personal_info'> */}
+              <p className='P'><p className='blue_p'>Freelance:</p>Available</p>
+              <p className='P'><p className='blue_p'>Skill:</p>Blockchain and fullstack</p>
+              <p className='P'><p className='blue_p'>Language:</p>English</p>
+              <button className='down_btn'>Download cv <MdDownload className='MdDownload'/></button>
+            </div>
+            <div className='about_personal_info_3'>
+              <div className='inner_personal_block'>
+                <div className='number_block'><p className='text_length'><p className='green_p'>2+</p>Experience</p></div>
+                <div className='number_block'><p className='text_length'><p className='green_p'>50+</p>Happy Clients</p></div>
+                <div className='number_block'><p className='text_length'><p className='green_p'>10+</p>Completed</p></div>
+              </div>
+              <div className='number_block_classic'><p><p className='green_p'>1</p>Awards won</p></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
- </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
