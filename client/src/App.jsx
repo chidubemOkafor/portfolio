@@ -1,6 +1,6 @@
 import './App.css'
 import Main from "../components/main/Main"
-// import Navbar from "../components/navbar/Navbar"
+import Navbar from "../components/navbar/Navbar"
 import Sidebar from '../components/sidebar/Sidebar'
 import About from "../components/about/About"
 import {useState,useEffect} from "react"
@@ -15,6 +15,7 @@ function App() {
   const [dark, setDark] = useState(false)
   const [light, setLight] = useState(false)
   const [minimize, setMinimize] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 768px)").matches);
 
   useEffect(() => {
       setTimeout(() => {
@@ -22,26 +23,42 @@ function App() {
       }, 2000)
   },[])
 
+  useEffect(() => {
+    // Function to handle window resize event
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+
+    // Add event listener for the 'resize' event
+    window.addEventListener("resize", handleResize);
+    alert(isMobile)
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array to run the effect only once
+
   return (
     <div>
     {!loading ? (
     <div>
     <Router>
-    {/* <Navbar
-        minimize = {minimize}
-    /> */}
-    <Sidebar 
+    {isMobile ? <Navbar/> : <></>}
+  
+  {!isMobile? <Sidebar 
+        isMobile = {isMobile}
         dark = {dark} 
         minimize = {minimize}
         setMinimize = {setMinimize}
         setDark = {setDark} 
         light = {light} 
         setLight = {setLight} 
-    />
+    />: <></>}
     
       <Routes>
         <Route path='/' element = {
             <Main 
+              isMobile = {isMobile}
               dark = {dark} 
               minimize = {minimize}
               setMinimize = {setMinimize}
@@ -53,6 +70,7 @@ function App() {
         />
         <Route path='/portfolio' element = {
             <Portfolio 
+              isMobile = {isMobile}
               dark = {dark} 
               minimize = {minimize}
               setMinimize = {setMinimize}
@@ -64,6 +82,7 @@ function App() {
         />
          <Route path="/about" element = {
            <About
+              isMobile = {isMobile}
               dark = {dark} 
               minimize = {minimize}
               setMinimize = {setMinimize}
@@ -74,6 +93,7 @@ function App() {
          }/>
          <Route path='/contact' element = {
             <Contact
+              isMobile = {isMobile}
               dark = {dark} 
               minimize = {minimize}
               setMinimize = {setMinimize}

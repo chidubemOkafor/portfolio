@@ -10,7 +10,7 @@ const Contact = (prop) => {
     <div className={`origin ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
       <div className='MAIN_container'>
         <div className='second_main_container'>
-          <div className='contact_div'>
+          <div className={!prop.isMobile ? 'contact_div' : 'contact_div_mobile'}>
             <div>
                     <h1>LET'S CHAT</h1>
                         <form>

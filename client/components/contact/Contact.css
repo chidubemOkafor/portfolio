@@ -40,9 +40,10 @@ form {
 .contact_div {
     width: 60vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1em;
+    gap: 3em;
     animation: intro 1s ease-in;
 }
 
@@ -66,4 +67,16 @@ input:focus {
 
 .freeform:focus {
     outline: none;
+}
+
+/* this is the styling for the mobile view */
+
+.contact_div_mobile {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20em;
+
+    gap: 2em
 }
