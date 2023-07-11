@@ -77,6 +77,6 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     margin-right: 20em;
-
+    margin-top: 20em;
     gap: 2em
 }

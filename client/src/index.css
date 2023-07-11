@@ -29,6 +29,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -42,7 +43,9 @@ body {
 }
 
 h1 {
+ 
   font-size: 3.2em;
+  z-index: 10;
 }
 
 button {

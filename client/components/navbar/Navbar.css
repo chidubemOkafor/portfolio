@@ -75,6 +75,18 @@
   padding: 10px;
 }
 
+.rotate {
+  animation: rotater_burger 1s ease-in;
+}
+
+@keyframes rotater_burger {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(360)
+  }
+}
 .bar:hover {
   background-color: rgb(26, 26, 26);
 }
