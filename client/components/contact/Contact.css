@@ -70,13 +70,23 @@ input:focus {
 }
 
 /* this is the styling for the mobile view */
+@media only screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+    /* Add your CSS rules here */
+    .contact_div {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15em;
+        align-items: center;
+        margin-right: 20em;
+        padding: 1em;
+        gap: 3em;
+        animation: intro 1s ease-in;
+    }
 
-.contact_div_mobile {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 20em;
-    margin-top: 20em;
-    gap: 2em
+#input {
+    width: 18em
 }
+  }

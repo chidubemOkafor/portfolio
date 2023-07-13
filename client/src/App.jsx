@@ -31,7 +31,6 @@ function App() {
 
     // Add event listener for the 'resize' event
     window.addEventListener("resize", handleResize);
-    alert(isMobile)
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -107,7 +106,6 @@ function App() {
     </div>
     ) : (
     <div className='Loading'>
-      <h2 className='h2'>USE AND HEADSET FOR BETTER EXPERIENCE <MdOutlineHeadsetMic className='headset'/></h2>
       <ImSpinner5 className='spinner'/>
     </div>
     )

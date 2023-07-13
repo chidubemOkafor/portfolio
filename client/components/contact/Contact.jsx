@@ -10,20 +10,20 @@ const Contact = (prop) => {
     <div className={`origin ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
       <div className='MAIN_container'>
         <div className='second_main_container'>
-          <div className={!prop.isMobile ? 'contact_div' : 'contact_div_mobile'}>
+          <div className= 'contact_div'>
             <div>
                     <h1>LET'S CHAT</h1>
                         <form>
-                            <input type="text" placeholder='Your Name'></input>
-                            <input type="email" placeholder='Your Email'></input>
-                            <textarea className="freeform" name="freeform" rows="4" cols="50" placeholder='Your Message'/>
+                            <input id='input' type="text" placeholder='Your Name'></input>
+                            <input id='input' type="email" placeholder='Your Email'></input>
+                            <textarea id='input' className="freeform" name="freeform" rows="4" cols="50" placeholder='Your Message'/>
                             <button>send message</button>
                         </form>
             </div>
             <div>
                 <div className='con_header'>
-                    <h4>GET IN TOUCH</h4>
-                    <p>Tell Me if You Have Any Project ;^)</p>
+                    {!prop.isMobile ? <h4>GET IN TOUCH</h4>: <h1>GET IN TOUCH</h1>}
+                    <p>Tell Me if You Have Any Project</p>
                 </div>
              
                 <div className='addressed'>

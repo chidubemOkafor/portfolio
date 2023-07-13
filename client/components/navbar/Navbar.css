@@ -40,7 +40,7 @@
   width: auto;
   position: relative;
   width: 100vw;
-
+  z-index: 50;
 }
 
 .hamburger {
@@ -64,6 +64,9 @@
 
 .roll_down {
   background-color: rgb(0, 0, 0);
+  max-height: 200px; /* Adjust the value based on your content height */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .bar {
@@ -76,15 +79,48 @@
 }
 
 .rotate {
-  animation: rotater_burger 1s ease-in;
+  animation: rotater_burger 1s ease-in-out
+}
+
+
+.scroll_up {
+  max-height: 0;
+}
+
+.roll_down {
+  max-height: 200px; /* Adjust the value based on your content height */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.scroll_up {
+  max-height: 0;
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-10em)
+  }
+  to {
+    transform: translateY(0em)
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(0em)
+  }
+  to {
+    transform: translateY(-11em)
+  }
 }
 
 @keyframes rotater_burger {
   from {
-    transform: rotate(0)
+    transform: rotate(0deg)
   }
   to {
-    transform: rotate(360)
+    transform: rotate(360deg)
   }
 }
 .bar:hover {
