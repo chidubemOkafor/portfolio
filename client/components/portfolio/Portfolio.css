@@ -154,19 +154,7 @@ Link {
       transform: translate(10px, -10px); /* Adjust the transform values to move the arrow upwards */
     }
   }
-  .portfolio {
-    position: relative;
-  }
 
-  .password {
-    position: absolute; /* Position the component absolutely within the parent container */
-    top: 0; /* Adjust the top, left, right, and bottom values as needed */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999; /* Set a higher z-index to display it over other elements */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ .password_div {
+    position: fixed;
+ }

@@ -11,3 +11,13 @@
 .text {
     width: 70%;
 }
+
+.main_project_div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0,0.6);
+    position: absolute;
+}

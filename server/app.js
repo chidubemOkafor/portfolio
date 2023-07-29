@@ -22,7 +22,7 @@ app.post("/api/authorization", (req, res) => {
   if (password === process.env.password) {
     res.status(200).json({ message: "authorized access" });
   } else {
-    res.status(401).json({ message: "invalid password" });
+    res.status(200).json({ message: "invalid password" });
   }
 });
 

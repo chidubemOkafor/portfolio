@@ -13,16 +13,15 @@ const AddProject = (prop) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
  
-    console.log(passwordValue)
 
   const login = () => {
-    axios.post("https://localhost:8000/api/autorization", {data: {password: pValue}})
+    axios.post("http://localhost:8000/api/authorization", {password: pValue})
     .then((response) => {
          if(response.data.message =="authorized access") {
             setToggleForm(true)
             prop.setTogglePassword(false)
          } else if (response.data.message == "invalid password") {
-            // foor styling
+            console.log(response.data.message)
          }
     })
     .catch((error) => {
@@ -38,7 +37,7 @@ const AddProject = (prop) => {
   }
         
   const add = () => {
-    axios.add("https://localhost:8000/api/addProjects",{Headers: {autorization : pValue}},data)
+    axios.add("http://localhost:8000/api/addProjects",{Headers: {autorization : pValue}},data)
     .then((response) => {
         consol
     })
@@ -47,24 +46,27 @@ const AddProject = (prop) => {
     })
   }
   return (
-    <div>
+    <>
+    <div className='main_project_div'>
         <div className='password_container'>
             <h4>enter a password</h4>
-            <input className='text' type='text'onChange={(e) => setPvalue(e.target.value)}/>
-            <button onClick>login</button>
+            <input className='text' type='password'onChange={(e) => setPvalue(e.target.value)}/>
+            <button  onClick={login}>login</button>
         </div>
-        {toggleForm ?
-           ( <div>
-
+    </div>
+    {toggleForm ?
+           ( 
+            <div>
                 <form>
                     <input type='text' className='title' onChange={(e) => setTitle(e.target.value)}/>
                     <input type='text' className='description' onChange={(e) => setDescription(e.target.value)}/>
                     <input type='text' className='link' onChange={(e) => setLink(e.target.value)}/>
                     <input type='file' className='image' onChange={(e) => setImage(e.target.files) }/>
                 </form>
-            </div>) : <></>
+            </div>
+            ) : <></>
         }
-    </div>
+    </>
   )
 }
 
