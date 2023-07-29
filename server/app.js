@@ -43,7 +43,7 @@ app.post("/api/addProjects", (req, res) => {
     if (error) {
       res.status(401).json({ error: "internal server error" });
     }
-    res.status(200).json(response);
+    res.status(200).json({ message: "project added" });
   });
 });
 
