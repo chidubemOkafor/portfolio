@@ -9,6 +9,7 @@ import {MdOutlineHeadsetMic} from "react-icons/md"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Portfolio from '../components/portfolio/Portfolio'
 import Contact from '../components/contact/Contact'
+import Footer from '../components/footer/Footer'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -102,6 +103,7 @@ function App() {
             />
          }/>
       </Routes> 
+      {isMobile ? <Footer/> : <></>}
     </Router>
     </div>
     ) : (

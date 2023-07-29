@@ -1,11 +1,12 @@
-import React,{useState} from 'react'
-import {GoHome} from "react-icons/go"
-import {AiOutlineInfoCircle} from "react-icons/ai"
-import {MdWorkOutline} from "react-icons/md"
-import {RiContactsLine} from "react-icons/ri"
-import {FiX} from "react-icons/fi"
-import {GiHamburgerMenu} from "react-icons/gi"
-import "./Navbar.css"
+import React, { useState } from 'react';
+import { GoHome } from 'react-icons/go';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
+import { MdWorkOutline } from 'react-icons/md';
+import { RiContactsLine } from 'react-icons/ri';
+import { FiX } from 'react-icons/fi';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   const [isRollDown, setIsRollDown] = useState(false);
@@ -39,10 +40,26 @@ const Navbar = () => {
       >
         {isRollDown && (
           <>
-            <p className="bar">Home</p>
-            <p className="bar">About</p>
-            <p className="bar">Portfolio</p>
-            <p className="bar">Contact</p>
+            <p className="nav">
+              <Link className="link" to="/">
+                <GoHome /> Home
+              </Link>
+            </p>
+            <p className="nav">
+              <Link className="link" to="/about">
+                <AiOutlineInfoCircle /> About
+              </Link>
+            </p>
+            <p className="nav">
+              <Link className="link" to="/portfolio">
+                <MdWorkOutline /> Projects
+              </Link>
+            </p>
+            <p className="nav">
+              <Link className="link" to="/contact">
+                <RiContactsLine /> Contact
+              </Link>
+            </p>
           </>
         )}
       </div>
@@ -51,6 +68,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-

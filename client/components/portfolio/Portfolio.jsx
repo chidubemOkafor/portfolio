@@ -1,11 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Portfolio.css';
 import { projects } from './projects.js';
 import {ImArrowUpRight2} from "react-icons/im"
 import {IoIosAddCircle} from "react-icons/io"
+import AddProject from '../addprojects/AddProject';
 
 const Portfolio = (prop) => {
+  const [togglePassword, setTogglePassword] = useState(false)
+
+
   return (
+    
+    <div className='protfolio'>
     <div className='origin_container'>
     <div className={`main_container ${prop.minimize ? "translate-out-project " : "translate-in-project"}`} >
       <div className='project_container'>
@@ -29,7 +35,9 @@ const Portfolio = (prop) => {
         })}
       </div>
     </div>
-    <IoIosAddCircle className='add_project'/>
+    {!togglePassword ? <IoIosAddCircle className='add_project' onClick={() => setTogglePassword(!togglePassword)} />: <></>}
+    </div>
+    {togglePassword ? <AddProject className = "password" setTogglePassword={setTogglePassword}/>: <></>}
     </div>
   );
 };
