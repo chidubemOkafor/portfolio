@@ -56,7 +56,7 @@ app.post("/api/addProjects", (req, res) => {
 });
 
 app.get("/api/getProjects", (req, res) => {
-  const sql = "SELECT * FROM projects WHERE id = 1";
+  const sql = "SELECT * FROM projects";
   connection.query(sql, (error, response) => {
     if (error) {
       console.error("Database error:", error);

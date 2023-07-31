@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import axios from "axios"
 import "./addProject.css"
+import isUrl from "is-url"
 
 const AddProject = (prop) => {
     const [pValue, setPvalue] = useState("")
@@ -11,6 +12,8 @@ const AddProject = (prop) => {
     const [error, setError] = useState("")
     const [messageSuccess, setMessageSuccess] = useState("")
     const [link, setLink] = useState("")
+    const [realLink, setRealLink] = useState("")
+   const [linkerror, setLinkError] = useState("")
     const [title, setTitle] = useState("")
     const [image, setImage] = useState("")
     const [description, setDescription] = useState("")
@@ -30,17 +33,12 @@ const AddProject = (prop) => {
     })
   }
 
-  const checkIfLink = (link) => {
-    if (!link.startsWith("http://") || !link.startsWith("www.") || !link.startsWith("https://"))
-      console.log("This is not a link");
-    }
-  };
-  
-
   const add = () => {
+   if(isUrl(link)) {
+    setRealLink(link)
     const data = {
         image: image,
-        link: link,
+        link: realLink,
         title: title,
         descriptions: description,
       };
@@ -56,12 +54,19 @@ const AddProject = (prop) => {
         setMessageSuccess(response.data.message)
         setTimeout(() => {
            setMessageSuccess("")
-        },2000)
+        },4000)
         console.log(response.data.message);
       })
       .catch((error) => {
         console.error(error);
       });
+    }else {
+        setLinkError("this is not a link")
+        setTimeout(() => {
+            setLinkError("")
+        },2000)
+        return true
+    }
   };
   
   return (
@@ -85,6 +90,7 @@ const AddProject = (prop) => {
                     <input type='text' placeholder='what your project is about' className='description' onChange={(e) => setDescription(e.target.value)}/><br/>
                     <label>Link</label><br/>
                     <input type='text' placeholder= "link to project" className='link' onChange={(e) => setLink(e.target.value)}/><br/>
+                    <div>{linkerror}</div>
                     <label>Image</label><br/>
                     <input type='file' placeholder="image of project" className='image' onChange={(e) => setImage(e.target.value)}/><br/>
                     <div>{messageSuccess}</div>

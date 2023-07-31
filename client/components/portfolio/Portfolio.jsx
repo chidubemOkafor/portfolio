@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import './Portfolio.css';
 import { projects } from './projects.js';
 import { ImArrowUpRight2 } from 'react-icons/im';
 import { IoIosAddCircle } from 'react-icons/io';
 import AddProject from '../addprojects/AddProject';
+import axios from 'axios';
 
 const Portfolio = (prop) => {
+  const[data, setData] = useState([])
   const [togglePassword, setTogglePassword] = useState(false);
+
+  useEffect(() => {
+     const fetchData = async () => {
+      try{
+        const response = await axios.get("http://localhost:8000/api/getProjects")
+        setData(response.data)
+      }
+      catch(error) {
+        console.error(error)
+      }
+    }
+    fetchData()
+   
+  },[])
 
   return (
     <div className='portfolio'>
@@ -17,7 +33,7 @@ const Portfolio = (prop) => {
           }`}
         >
           <div className='project_container'>
-            {projects.map((project, index) => {
+            {data.map((project, index) => {
               return (
                 <div key={index} className='p_container'>
                   <img className='image' src={project.image} alt={project.name} />
@@ -25,7 +41,7 @@ const Portfolio = (prop) => {
                     <h3>
                       {project.name} <ImArrowUpRight2 className='arrow_up' />{' '}
                     </h3>
-                    <p className='main_text'>{project.description}</p>
+                    <p className='main_text'>{project.text}</p>
                     <div className='stack_container'>
                       {project.stack.map((item, index) => (
                         <div key={index} className='stacks'>
