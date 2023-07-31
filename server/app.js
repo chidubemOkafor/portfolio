@@ -1,21 +1,25 @@
 const express = require("express");
 const { connection } = require("./connect");
 const cors = require("cors");
+
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const PORT = process.env.PORT;
+
+const PORT = process.env.PORT || 8000;
 const app = express();
 
-connection.connect((err) => {
-  if (err) {
-    console.error("reverted with:" + err);
-  } else {
+// Use async/await to connect to the database
+(async () => {
+  try {
+    await connection.connect();
     console.log("connected to sql database");
+  } catch (err) {
+    console.error("reverted with:", err);
   }
-});
+})();
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: "50mb" }));
 
 app.post("/api/authorization", (req, res) => {
   const { password } = req.body;
@@ -28,35 +32,41 @@ app.post("/api/authorization", (req, res) => {
 
 app.post("/api/addProjects", (req, res) => {
   // Check if the user is authorized before adding the project
-  const { image, link, title, descriptions } = req.body;
+  const { authorization } = req.headers;
+  if (authorization !== process.env.password) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
+  const { link, title, descriptions, image } = req.body;
+  // const imageBuffer = Buffer.from(image, "base64");
   const sql =
-    "INSERT INTO projects(image,link,title,descriptions) VALUES(?,?,?,?)";
+    "INSERT INTO projects(image, link, title, descriptions) VALUES (?, ?, ?, ?)";
   const values = [image, link, title, descriptions];
 
   // Verify authorization before proceeding
-  const { authorization } = req.headers;
-  if (authorization !== process.env.password) {
-    return res.status(401).json({ message: "Unauthorized enter a password" });
-  }
 
   connection.query(sql, values, (error, response) => {
     if (error) {
-      res.status(401).json({ error: "internal server error" });
+      console.error("Database error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    } else {
+      res.status(200).json({ message: "project added" });
     }
-    res.status(200).json({ message: "project added" });
   });
 });
 
 app.get("/api/getProjects", (req, res) => {
-  sql = "SELECT * FROM projects WHERE id = 1";
+  const sql = "SELECT * FROM projects WHERE id = 1";
   connection.query(sql, (error, response) => {
     if (error) {
-      res.status(401).json({ error: "Internal server error" });
+      console.error("Database error:", error);
+      res.status(500).json({ error: "Internal server error" });
+    } else {
+      res.status(200).json(response);
     }
-    res.status(200).json(response);
   });
 });
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log(`server listening on ${PORT}...`);
 });
