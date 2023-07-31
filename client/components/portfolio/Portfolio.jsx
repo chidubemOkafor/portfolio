@@ -7,7 +7,8 @@ import AddProject from '../addprojects/AddProject';
 import axios from 'axios';
 
 const Portfolio = (prop) => {
-  const[data, setData] = useState([])
+  const [data, setData] = useState([])
+
   const [togglePassword, setTogglePassword] = useState(false);
 
   useEffect(() => {
@@ -21,8 +22,12 @@ const Portfolio = (prop) => {
       }
     }
     fetchData()
-   
   },[])
+ console.log(data)
+  // for(let i = 0; i < data.length; i++) {
+  //   console.log(data[i])
+  // }
+
 
   return (
     <div className='portfolio'>
@@ -33,26 +38,24 @@ const Portfolio = (prop) => {
           }`}
         >
           <div className='project_container'>
-            {data.map((project, index) => {
-              return (
-                <div key={index} className='p_container'>
-                  <img className='image' src={project.image} alt={project.name} />
+          {data?.map((d) => (
+                <div key={d.id} className='p_container'>
+                  <img className='image' src={`data:image/png;base64,${Buffer.from(d.image.data).toString('base64')}`} alt="image" />
                   <div className='text_div'>
                     <h3>
-                      {project.name} <ImArrowUpRight2 className='arrow_up' />{' '}
+                      {d.title} <ImArrowUpRight2 className='arrow_up' />{' '}
                     </h3>
-                    <p className='main_text'>{project.text}</p>
+                    <p className='main_text'>{d.descriptions}</p>
                     <div className='stack_container'>
-                      {project.stack.map((item, index) => (
+                      {/* {project.stack.map((item, index) => (
                         <div key={index} className='stacks'>
                           {item}
                         </div>
-                      ))}
+                      ))} */}
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              ))}
           </div>
         </div>
       </div>
