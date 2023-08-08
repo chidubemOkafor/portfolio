@@ -5,6 +5,7 @@ import {IoMdArrowDropleft,IoMdArrowDropright} from "react-icons/io"
 import {MdToggleOff,MdToggleOn} from "react-icons/md"
 import {useState} from "react"
 
+
 function Sidebar(prop) {
   const year = new Date().getFullYear()
   const toggleMinimize = () => {prop.setMinimize(!prop.minimize)}
