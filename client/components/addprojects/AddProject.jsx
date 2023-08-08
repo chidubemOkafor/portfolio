@@ -92,7 +92,7 @@ const AddProject = (prop) => {
                     <input type='text' placeholder= "link to project" className='link' onChange={(e) => setLink(e.target.value)}/><br/>
                     <div>{linkerror}</div>
                     <label>Image</label><br/>
-                    <input type='file' placeholder="image of project" className='image' onChange={(e) => setImage(e.target.value)}/><br/>
+                    <input type='file' placeholder="image of project" className='image' onChange={(e) => setImage(e.target.value)} accept="image/png, image/jpeg"/><br/>
                     <div>{messageSuccess}</div>
                     </div>
                     <div>

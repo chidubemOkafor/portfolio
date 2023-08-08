@@ -37,11 +37,13 @@ app.post("/api/addProjects", (req, res) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
 
-  const { link, title, descriptions, image } = req.body;
-  // const imageBuffer = Buffer.from(image, "base64");
+  const image = req.body.image;
+  const imageBuffer = Buffer.from(image).toString("base64");
+
+  const { link, title, descriptions } = req.body;
   const sql =
-    "INSERT INTO projects(image, link, title, descriptions) VALUES (?, ?, ?, ?)";
-  const values = [image, link, title, descriptions];
+    "INSERT INTO projets(image, link, title, descriptions) VALUES (?, ?, ?, ?)";
+  const values = [imageBuffer, link, title, descriptions];
 
   // Verify authorization before proceeding
 
@@ -56,7 +58,7 @@ app.post("/api/addProjects", (req, res) => {
 });
 
 app.get("/api/getProjects", (req, res) => {
-  const sql = "SELECT * FROM projects";
+  const sql = "SELECT * FROM projets";
   connection.query(sql, (error, response) => {
     if (error) {
       console.error("Database error:", error);

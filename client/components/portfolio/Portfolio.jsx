@@ -3,6 +3,7 @@ import './Portfolio.css';
 import { projects } from './projects.js';
 import { ImArrowUpRight2 } from 'react-icons/im';
 import { IoIosAddCircle } from 'react-icons/io';
+import Base64Image from './Base64Image';
 import AddProject from '../addprojects/AddProject';
 import axios from 'axios';
 
@@ -23,11 +24,13 @@ const Portfolio = (prop) => {
     }
     fetchData()
   },[])
- console.log(data)
-  // for(let i = 0; i < data.length; i++) {
-  //   console.log(data[i])
-  // }
 
+  const convertImage = (image) => {
+
+    return
+  }
+
+console.log(data)
 
   return (
     <div className='portfolio'>
@@ -40,7 +43,7 @@ const Portfolio = (prop) => {
           <div className='project_container'>
           {data?.map((d) => (
                 <div key={d.id} className='p_container'>
-                  <img className='image' src={`data:image/png;base64,${Buffer.from(d.image.data).toString('base64')}`} alt="image" />
+                  <Base64Image base64String= {d.image.data} />
                   <div className='text_div'>
                     <h3>
                       {d.title} <ImArrowUpRight2 className='arrow_up' />{' '}
