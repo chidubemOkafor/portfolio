@@ -10,6 +10,8 @@ import html from "../../src/assets/icons/html.png"
 import javascriot from "../../src/assets/icons/javascript.png"
 import './Main.css'
 import { MdDownload } from "react-icons/md"
+import resume from '../assets/Resume.pdf'
+
 
 function Main(prop) {
   const text_buttons = {
@@ -49,7 +51,7 @@ function Main(prop) {
               </div>
             </div>
             <div className='button_div'>
-              <a href="https://docs.google.com/document/d/1lbQXegC7KajcBWdoT4k7jXBXq6RNWk0edpxB0FkqTkw/edit?usp=sharing" download="resume.pdf">
+              <a href={resume} download="Resume.pdf">
                 <button className='down_btn'>Download cv <MdDownload className='MdDownload' /></button>
               </a>
               <button>Hire me</button>

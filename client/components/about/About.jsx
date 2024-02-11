@@ -1,6 +1,7 @@
 import React from 'react'
 import "./About.css"
 import { MdDownload } from "react-icons/md"
+import resume from '../assets/Resume.pdf'
 
 const About = (prop) => {
   return (
@@ -17,7 +18,9 @@ const About = (prop) => {
               <p className='P'><p className='blue_p'>Freelance:</p>Available</p>
               <p className='P'><p className='blue_p'>Skill:</p>Blockchain and fullstack</p>
               <p className='P'><p className='blue_p'>Language:</p>English</p>
-              <button className='down_btn'>Download cv <MdDownload className='MdDownload' /></button>
+              <a href={resume} download="Resume.pdf">
+                <button className='down_btn'>Download cv <MdDownload className='MdDownload' /></button>
+              </a>
             </div>
             <div className='about_personal_info_3'>
               <div className='inner_personal_block'>

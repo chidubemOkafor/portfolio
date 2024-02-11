@@ -13,11 +13,11 @@ const Contact = (prop) => {
           <div className='contact_div'>
             <div>
               <h1>LET'S CHAT</h1>
-              <form>
-                <input id='input' type="text" placeholder='Your Name'></input>
-                <input id='input' type="email" placeholder='Your Email'></input>
-                <textarea id='input' className="freeform" name="freeform" rows="4" cols="50" placeholder='Your Message' />
-                <button>send message</button>
+              <form action="https://formspree.io/f/xpzvdzww" method="POST">
+                <input name='name' id='input' type="text" placeholder='Your Name'></input>
+                <input name="email" id='input' type="email" placeholder='Your Email'></input>
+                <textarea name="message" id='input' className="freeform" rows="4" cols="50" placeholder='Your Message' />
+                <button type="submit">send message</button>
               </form>
             </div>
             <div>
