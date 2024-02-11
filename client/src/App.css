@@ -1,15 +1,15 @@
-.app_container{
+.app_container {
   display: flex;
   flex-direction: row;
 }
 
 .Loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    flex-direction: column;
-    column-gap: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  column-gap: 3em;
 }
 
 .headset {
@@ -26,16 +26,18 @@
 }
 
 .spinner {
-    color: white;
-    height: 5em;
-    width: 5em;
-    animation: spin 1s infinite linear
+  color: white;
+  height: 5em;
+  width: 5em;
+  animation: spin 1s infinite linear
 }
+
 @keyframes spin {
-   from {
-      transform: rotate(0deg)
-   }
-   to {
-      transform: rotate(360deg)
-   }
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
 }

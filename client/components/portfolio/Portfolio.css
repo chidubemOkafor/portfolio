@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    z-index: 0;
 }
 
 .project_container {
@@ -19,12 +20,21 @@
     margin-top: 5em;
 }
 
+.grid_view {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 5px;
+    /* Two columns, each occupying an equal fraction of the available space */
+}
+
 .image {
     object-fit: cover;
     border: 2px solid rgb(48, 47, 47);
     border-radius: 3px;
     width: 10em;
-    height: 5em
+    height: 5em;
+    display: flex;
+    flex-direction: row;
 }
 
 .p_container {
@@ -34,7 +44,7 @@
     padding: 22px;
     margin-bottom: 2em;
     align-items: center;
-    cursor: pointer;;
+    cursor: pointer;
     animation: intro 1s ease-in;
 }
 
@@ -52,10 +62,10 @@
 }
 
 .main_text {
-    width: 27em;
+    width: auto;
 }
 
-.translate-out-project  {
+.translate-out-project {
     transform: translateX(-10em);
     transition: transform 0.5s ease;
 }
@@ -65,16 +75,17 @@
     transition: transform 0.5s ease;
 }
 
-.p_container:hover{
-    background-color: rgba(0, 0, 0, 0.1); /* Sets a translucent black background */
+.p_container:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Sets a translucent black background */
 
-  }
+}
 
 .p_container:hover .arrow_up {
     animation: arrowup 0.4s ease-in forwards;
 }
 
-  
+
 .p_container:hover .image {
     animation: borderAnimation 2s linear infinite;
 }
@@ -84,17 +95,30 @@
 }
 
 .stack_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
 }
 
 .stacks {
     display: flex;
     flex-direction: row;
-    margin:5px;
+    margin: 5px;
     justify-content: center;
     align-items: center;
     color: #47ffed;
-    background-color: rgba(79, 209, 197,0.3);
+    background-color: rgba(79, 209, 197, 0.3);
+    padding: 2px 8px 2px 8px;
+    border-radius: 100px;
+}
+
+.stacks2 {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    color: rgba(228, 26, 29, 0.7);
+    background-color: rgba(228, 26, 29, 0.3);
     padding: 2px 8px 2px 8px;
     border-radius: 100px;
 }
@@ -104,10 +128,12 @@ Link {
     color: inherit;
     text-decoration: none;
 }
+
 @keyframes rotate1 {
     from {
         transform: rotate(0deg)
     }
+
     to {
         transform: rotate(180deg)
     }
@@ -117,6 +143,7 @@ Link {
     from {
         transform: rotate(180deg)
     }
+
     to {
         transform: rotate(360deg)
     }
@@ -124,37 +151,76 @@ Link {
 
 @keyframes stackAnimation {
     0% {
-        background: rgba(79, 209, 197,0.3);
+        background: rgba(79, 209, 197, 0.3);
     }
+
     50% {
-        background: rgba(79, 209, 197,0.5);
+        background: rgba(79, 209, 197, 0.5);
     }
+
     100% {
-        background: rgba(79, 209, 197,0.3);
+        background: rgba(79, 209, 197, 0.3);
     }
 }
 
 @keyframes borderAnimation {
     0% {
-      border-color: rgb(48, 47, 47);
+        border-color: rgb(48, 47, 47);
     }
+
     50% {
-      border-color: rgb(95, 95, 95);
+        border-color: rgb(95, 95, 95);
     }
+
     100% {
-      border-color: rgb(48, 47, 47);
+        border-color: rgb(48, 47, 47);
     }
-  }
+}
 
-  @keyframes arrowup {
+@keyframes arrowup {
     from {
-      transform: translate(0);
+        transform: translate(0);
     }
-    to {
-      transform: translate(10px, -10px); /* Adjust the transform values to move the arrow upwards */
-    }
-  }
 
- .password_div {
+    to {
+        transform: translate(10px, -10px);
+        /* Adjust the transform values to move the arrow upwards */
+    }
+}
+
+.password_div {
     position: fixed;
- }
+}
+
+@media (max-width: 940px) {
+    .grid_view {
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        gap: 5px;
+        /* Two columns, each occupying an equal fraction of the available space */
+    }
+
+    .project_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        margin-top: 5em;
+    }
+
+    .translate-out-project {
+        transform: translateX(0);
+    }
+
+    .translate-in-project {
+        transform: translateX(0);
+    }
+
+    .main_container {
+        margin-left: 0;
+    }
+}
+
+.link {
+    color: white;
+}

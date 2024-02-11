@@ -4,7 +4,8 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { MdWorkOutline } from 'react-icons/md';
 import { RiContactsLine } from 'react-icons/ri';
 import { FiX } from 'react-icons/fi';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { BiCaretDown } from "react-icons/bi";
+import { BiCaretUp } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -19,14 +20,13 @@ const Navbar = () => {
     <div>
       <div className="second_navbar_container">
         <div className="gap_of">
-          <p className="my_name">Okafor Chidubem</p>
           {!isRollDown ? (
-            <GiHamburgerMenu
+            <BiCaretDown
               onClick={toggleBar}
               className={`hamburger ${isRollDown ? 'rotate' : ''}`}
             />
           ) : (
-            <FiX onClick={toggleBar} className="hamburger" />
+            <BiCaretUp onClick={toggleBar} className="hamburger" />
           )}
         </div>
       </div>
@@ -42,22 +42,22 @@ const Navbar = () => {
           <>
             <p className="nav">
               <Link className="link" to="/">
-                <GoHome /> Home
+                Home
               </Link>
             </p>
             <p className="nav">
               <Link className="link" to="/about">
-                <AiOutlineInfoCircle /> About
+                About
               </Link>
             </p>
             <p className="nav">
               <Link className="link" to="/portfolio">
-                <MdWorkOutline /> Projects
+                Projects
               </Link>
             </p>
             <p className="nav">
               <Link className="link" to="/contact">
-                <RiContactsLine /> Contact
+                Contact
               </Link>
             </p>
           </>

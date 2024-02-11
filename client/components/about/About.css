@@ -11,9 +11,11 @@
 .blue_p {
     color: rgba(79, 209, 197)
 }
+
 .green_p {
     color: rgba(79, 209, 197);
 }
+
 .about_personal_info {
     line-height: 0;
 }
@@ -24,7 +26,7 @@
     background-color: #1a1a1a;
     line-height: 0;
     width: 7em;
-    box-shadow: 2px 2px 2px rgb(0, 0, 0,0.3);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
 }
 
 .number_block_classic {
@@ -33,7 +35,7 @@
     margin: 0.5em;
     background-color: #1a1a1a;
     line-height: 0;
-    box-shadow: 2px 2px 2px rgb(0, 0, 0,0.3);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
 }
 
 
@@ -52,5 +54,25 @@
 }
 
 .about_personal_info_3 {
-    gap:2;
+    gap: 2;
+}
+
+@media (max-width: 940px) {
+    .about_container {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .number_block {
+        width: 4em;
+        height: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .number_block_classic {
+        width: auto;
+    }
 }

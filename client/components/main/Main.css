@@ -1,21 +1,15 @@
-.music_note {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    right: 0;
-    top:0;
-    margin-top: 2.5em;
-    margin-right: 9em;
-    cursor: pointer;
-    animation: intro 2s ease-out forwards;
-  }
+.display_button {
+  height: 50px;
+  width: 50px;
+  margin-top: 2em;
+  cursor: pointer;
+  margin-right: 5em;
+}
 
-  .display_button{
-    height: 50px;
-    width: 50px;
-    margin-top: 2em;
-    cursor: pointer;
-    margin-right: 5em;
+.button_div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px
 }
 
 .origin {
@@ -23,26 +17,25 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-
 }
 
 .MAIN_container {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .second_main_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100%;
+
 }
 
 .stack {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1em;
   margin: 20px 0;
@@ -50,7 +43,7 @@
 
 .individual_stack img {
   width: 30px;
-  margin:10px
+  margin: 10px
 }
 
 .solidity {
@@ -64,14 +57,16 @@
 
 .names {
   display: flex;
-  gap: 2em;
+  gap: 1em;
   line-height: 0;
 }
+
 .surname {
   color: rgba(79, 209, 197);
 }
+
 .MdDownload {
-  background-color: rgba(79, 209, 197,0.6);
+  background-color: rgba(79, 209, 197, 0.6);
   padding: 5px;
   border-radius: 20px;
 }
@@ -95,12 +90,12 @@
 
 body {
   overflow-x: hidden;
-  background-color:rgb(32, 32, 35)
+  background-color: rgb(32, 32, 35)
 }
 
 .button_div {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: repeat(4fr, 4);
   gap: 10px
 }
 
@@ -108,17 +103,20 @@ body {
   height: 19em;
   border-radius: 100%;
   width: 19em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: url("https://media.licdn.com/dms/image/D4D03AQGmjVgdB8hgsw/profile-displayphoto-shrink_400_400/0/1676415517689?e=1692835200&v=beta&t=-DetzRzoigad0vq8XaLKbehx-7J6t05Osg_ysAIfByo");
+  background: url('https://avatars.githubusercontent.com/u/93622341?v=4');
   border: 2px solid white;
+  background-position: center;
+  background-size: contain;
 }
 
 @keyframes morph {
-  0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
-  100% {border-radius: 40% 60%;} 
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+
+  100% {
+    border-radius: 40% 60%;
+  }
 }
 
 @keyframes spin {
@@ -129,7 +127,7 @@ body {
 
 .text-container {
   margin-left: 2em;
-
+  width: 37%;
 }
 
 .text_intro {
@@ -137,17 +135,17 @@ body {
 }
 
 @keyframes intro {
-from {
-  transform: translate(100px);
-}
+  from {
+    transform: translate(100px);
+  }
 }
 
 @keyframes intro2 {
-from {
-  transform: translate(900px);
-}
+  from {
+    transform: translate(900px);
+  }
 
-} 
+}
 
 .main_text {
   width: 30em;
@@ -158,22 +156,26 @@ from {
   display: flex;
   gap: 15px;
 
-.icon {
-  height: 30px;
-  width: 30px;
-}
-.twitter {
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .twitter {
     animation: intro 1s ease-in forwards;
-}
-.linkedin {
+  }
+
+  .linkedin {
     animation: intro 1.2s ease-in forwards;
-}
-.discord {
+  }
+
+  .discord {
     animation: intro 1.5s ease-in forwards;
-}
-.github {
+  }
+
+  .github {
     animation: intro 1.7s ease-in forwards;
-}
+  }
 
 }
 
@@ -184,4 +186,52 @@ from {
 
   }
 
+}
+
+@media (max-width: 940px) {
+  .container {
+    height: 14em;
+    border-radius: 100%;
+    width: 14em;
+    background: url('https://avatars.githubusercontent.com/u/93622341?v=4');
+    border: 2px solid white;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .translate-in-main {
+    transform: translateX(0);
+  }
+
+  .translate-out-main {
+    transform: translateX(0);
+  }
+
+  .MAIN_container {
+    padding: 20px 0px;
+  }
+
+  .names {
+    gap: 1em;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+    width: 90%;
+  }
+
+  .button_div {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px
+  }
 }

@@ -36,17 +36,18 @@
 } */
 
 .second_navbar_container {
-  background-color: #1a1a1a;
   width: auto;
-  position: relative;
+  position: absolute;
   width: 100vw;
   z-index: 50;
+  top: 0;
 }
 
 .hamburger {
   cursor: pointer;
   height: 40px;
-  width: 40px
+  width: 40px;
+  position: sticky;
 }
 
 .my_name {
@@ -56,17 +57,23 @@
 
 .gap_of {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-left: 20px;
   padding-right: 25px;
 }
 
 .roll_down {
-  background-color: rgb(0, 0, 0);
-  max-height: 200px; /* Adjust the value based on your content height */
+  max-height: 200px;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  padding: 20px;
+  border-radius: 0px 0px 15px 15px;
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  padding-top: 40px;
+  box-shadow: rgb(26, 26, 26);
 }
 
 .bar {
@@ -88,7 +95,8 @@
 }
 
 .roll_down {
-  max-height: 200px; /* Adjust the value based on your content height */
+  max-height: 200px;
+  /* Adjust the value based on your content height */
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
@@ -101,6 +109,7 @@
   from {
     transform: translateY(-10em)
   }
+
   to {
     transform: translateY(0em)
   }
@@ -110,6 +119,7 @@
   from {
     transform: translateY(0em)
   }
+
   to {
     transform: translateY(-11em)
   }
@@ -119,10 +129,12 @@
   from {
     transform: rotate(0deg)
   }
+
   to {
     transform: rotate(360deg)
   }
 }
+
 .bar:hover {
   background-color: rgb(26, 26, 26);
 }
