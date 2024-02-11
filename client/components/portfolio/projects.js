@@ -1,5 +1,6 @@
 import bruh1 from '../assets/bruhbears1.png'
 import bruh2 from '../assets/bruhbears2.png'
+import bruh3 from '../assets/bruhbears3.png'
 import myportfoliowebsite from '../assets/myportfoliowebsite.png'
 import myportfoliowebsite2 from '../assets/portfolio2.png'
 import myportfoliowebsite3 from '../assets/portfolio3.png'
@@ -46,7 +47,7 @@ export const projects = [
     {
         name : "bruh bear",
         description: "bruh bear is a game I developed from my love of flappy bird",
-        image: [bruh1,bruh2],
+        image: [bruh1,bruh2,bruh3],
         link: "https://bruhbird.vercel.app/",
         stack: ["html","css","javascript"]
     },
