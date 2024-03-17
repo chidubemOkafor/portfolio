@@ -10,6 +10,10 @@ import faynd3 from '../assets/faynd3.png'
 import weather from '../assets/weather.png'
 import Dloto1 from '../assets/Dloto1.png'
 import Dloto2 from '../assets/Dloto2.png'
+import basicchathome from '../assets/basic chat home.png'
+import basicchatauth from '../assets/desktop chat auth1.png'
+import basicchat from '../assets/desktop chat1.png'
+import basicchatmobile from '../assets/mobile chat 1.png'
 
 export const projects = [
     // {
@@ -32,12 +36,12 @@ export const projects = [
     //     link: "https://github.com/chidubemOkafor/weatherapp?tab=readme-ov-file",
     //     stack: ["react","solidity","nodejs","tailwind","ongoing"]
     // },
-    // {
-    //     name : "blog",
-    //     description: "a real working blow ",
-    //     image: ["https://images.pexels.com/photos/17260660/pexels-photo-17260660/free-photo-of-city-restaurant-vacation-people.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"],
-    //     stack: ["react","nodejs","express","sql"]
-    // },
+    {
+        name : "basic chat",
+        description: "basic chat app Is a chat app that lets you level up the more you use it. you can add friends, view level leaderboard and communicate privately.",
+        image: [basicchathome,basicchatauth,basicchat,basicchatmobile],
+        stack: ["react","nodejs","express","mongodb","socket.io"]
+    },
     {
         name : "portfolio website v1",
         description: "the current version of my portfolio website",
