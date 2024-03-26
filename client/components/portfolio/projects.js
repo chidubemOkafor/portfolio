@@ -47,6 +47,7 @@ export const projects = [
         name : "portfolio website v1",
         description: "the current version of my portfolio website",
         image: [myportfoliowebsite,myportfoliowebsite2,myportfoliowebsite3],
+        link: "https://chidubemokafor.onrender.com",
         stack: ["vite","react","css"]
     },
     {
