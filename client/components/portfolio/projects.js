@@ -40,6 +40,7 @@ export const projects = [
         name : "basic chat",
         description: "basic chat app Is a chat app that lets you level up the more you use it. you can add friends, view level leaderboard and communicate privately.",
         image: [basicchathome,basicchatauth,basicchat,basicchatmobile],
+        link: "https://basicchatapp-frontend1.onrender.com",
         stack: ["react","nodejs","express","mongodb","socket.io"]
     },
     {
