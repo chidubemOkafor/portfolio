@@ -26,7 +26,7 @@ export const projects = [
         name : "weather app",
         description: "you enter the country and you will get the exact temperature, wind speed, humidity and temperature of that country",
         image: [weather],
-        link: "https://github.com/chidubemOkafor/weatherapp?tab=readme-ov-file",
+        link: "https://weatherapp-p3y3.onrender.com",
         stack: ["react","api","axios"]
     },
     // {
