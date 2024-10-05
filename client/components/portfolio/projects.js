@@ -17,6 +17,12 @@ import basicchatmobile from "../assets/mobile chat 1.png";
 import pageblocker1 from "../assets/pageblocker1.png";
 import pageblocker2 from "../assets/pageblocker2.png";
 import pageblocker3 from "../assets/pageblocker3.png";
+import anical1 from "../assets/anical1.png";
+import anical2 from "../assets/anical2.png";
+import anical3 from "../assets/anical3.png";
+import anical4 from "../assets/anical4.png";
+import anical5 from "../assets/anical5.png";
+import anical6 from "../assets/anical6.png";
 
 export const projects = [
   // {
@@ -42,12 +48,22 @@ export const projects = [
     stack: ["javascript", "HTML", "CSS", "Chrome Extensions API"],
   },
   {
-    name: "weather app",
+    name: "anical",
     description:
-      "you enter the country and you will get the exact temperature, wind speed, humidity and temperature of that country",
-    image: [weather],
+      "Anical is an intuitive platform designed for anime enthusiasts, allowing users to search for their favorite shows, add them to a personalized watchlist, and receive timely email notifications whenever a new episode is released. With Anical, staying up-to-date with the latest episodes is seamless, ensuring that users never miss a release. The system is built with a focus on user convenience and offers an effortless way to manage anime-watching schedules.",
+    image: [anical1, anical2, anical3, anical4, anical5, anical6],
     link: "https://weatherapp-p3y3.onrender.com",
-    stack: ["react", "api", "axios"],
+    stack: [
+      "ongoing",
+      "react+ts",
+      "api",
+      "axios",
+      "passportjs",
+      "typescript",
+      "auth",
+      "python",
+      "cron",
+    ],
   },
   {
     name: "weather app",

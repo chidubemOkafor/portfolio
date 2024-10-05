@@ -14,9 +14,10 @@
 
 .project_container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    width: 42em;
+    width: 90%;
     margin-top: 5em;
 }
 
@@ -95,12 +96,12 @@
 }
 
 .stack_container {
-    display: grid;
-    grid-template-columns: repeat(4, 0fr);
+    display: flex;
 }
 
 .stacks {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 5px;
     justify-content: center;
@@ -109,10 +110,12 @@
     background-color: rgba(79, 209, 197, 0.3);
     padding: 2px 8px 2px 8px;
     border-radius: 100px;
+    width: auto;
 }
 
 .stacks2 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 5px;
     justify-content: center;
