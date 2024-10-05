@@ -26,20 +26,6 @@ function App() {
     }, 2000)
   }, [])
 
-  // useEffect(() => {
-  //   // Function to handle window resize event
-  //   const handleResize = () => {
-  //     setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-  //   };
-
-  //   // Add event listener for the 'resize' event
-  //   window.addEventListener("resize", handleResize);
-  //   // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []); // Empty dependency array to run the effect only once
-
   return (
     <div>
       {!loading ? (
