@@ -23,6 +23,9 @@ import anical3 from "../assets/anical3.png";
 import anical4 from "../assets/anical4.png";
 import anical5 from "../assets/anical5.png";
 import anical6 from "../assets/anical6.png";
+import neotech1 from "../assets/neotech1.png";
+import neotech2 from "../assets/neotech2.png";
+import neotech3 from "../assets/neotech3.png";
 
 export const projects = [
   // {
@@ -52,7 +55,7 @@ export const projects = [
     description:
       "Anical is an intuitive platform designed for anime enthusiasts, allowing users to search for their favorite shows, add them to a personalized watchlist, and receive timely email notifications whenever a new episode is released. With Anical, staying up-to-date with the latest episodes is seamless, ensuring that users never miss a release. The system is built with a focus on user convenience and offers an effortless way to manage anime-watching schedules.",
     image: [anical1, anical2, anical3, anical4, anical5, anical6],
-    link: "https://weatherapp-p3y3.onrender.com",
+    link: "https://github.com/chidubemOkafor/server.git",
     stack: [
       "ongoing",
       "react+ts",
@@ -66,12 +69,11 @@ export const projects = [
     ],
   },
   {
-    name: "weather app",
-    description:
-      "you enter the country and you will get the exact temperature, wind speed, humidity and temperature of that country",
-    image: [weather],
+    name: "neotech",
+    description: "My software development agency",
+    image: [neotech1, neotech2, neotech3],
     link: "https://weatherapp-p3y3.onrender.com",
-    stack: ["react", "api", "axios"],
+    stack: ["ongoing", "react"],
   },
   // {
   //     name : "decentralized exchange",
