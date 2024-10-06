@@ -56,8 +56,7 @@
 }
 
 .names {
-  display: flex;
-  gap: 1em;
+  flex-wrap: wrap;
   line-height: 0;
 }
 

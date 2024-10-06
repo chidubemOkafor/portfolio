@@ -26,8 +26,7 @@ function Main(prop) {
           <div className='text-container'>
             <div className='text_intro'>
               <div className='names'>
-                <h1 style={text_buttons}>CHIDUBEM</h1>
-                <h1 className='surname'>OKAFOR</h1>
+                <h1 style={text_buttons}>CHIDUBEM <span  className='surname'>OKAFOR (OC)</span></h1>
               </div>
               <p className='main_text'>I am a web and blockchain developer, passionate about creating innovative digital solutions. With expertise in web development and blockchain technology.</p>
             </div>
