@@ -15,7 +15,6 @@ const Portfolio = (prop) => {
           <div className='project_container'>
             {projects.map((profile, index) => (
               <div key={index} className='p_container'>
-                <div key={index} className='text_div'>
                   <div className='grid_view'>
                     {profile.image.map((img, index) => (<img key={index} className='image' src={img} />))}
                   </div>
@@ -31,7 +30,6 @@ const Portfolio = (prop) => {
                       </div>
                     ))}
                   </div>
-                </div>
               </div>
             ))}
 
