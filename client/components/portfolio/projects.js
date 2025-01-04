@@ -26,14 +26,27 @@ import anical6 from "../assets/anical6.png";
 import neotech1 from "../assets/neotech1.png";
 import neotech2 from "../assets/neotech2.png";
 import neotech3 from "../assets/neotech3.png";
+import superfunds1 from "../assets/superfunds1.png";
+import superfunds2 from "../assets/superfunds2.png";
+import superfunds3 from "../assets/superfunds3.png";
+import superfunds4 from "../assets/superfunds4.png";
 
 export const projects = [
-  // {
-  //     name : "nft music player",
-  //     description: "this is an app that lets you play music and as your nft",
-  //     image: ["https://images.pexels.com/photos/17196111/pexels-photo-17196111/free-photo-of-fashion-people-woman-girl.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"],
-  //     stack: ["react","solidity","nodejs", "ongoing"]
-  // },
+  {
+    name: "superfunds",
+    description:
+      "This app is a decentralized platform enabling users to create funding proposals for open-source projects. It integrates blockchain smart contracts to handle secure and transparent fund management, including deposits, withdrawals, and progress tracking. The proposal and funding data are indexed using The Graph's Subgraph, allowing real-time querying and updates. Users interact with the platform through a React-based frontend, leveraging GraphQL for data fetching and Zustand for state management, ensuring seamless and dynamic updates as funding progresses.",
+    image: [superfunds1, superfunds2, superfunds3, superfunds4],
+    link: "https://superfunds-dpkifethb-chidubemokafors-projects.vercel.app",
+    stack: [
+      "vite-react",
+      "graph-ql",
+      "subgraph",
+      "solidity",
+      "ongoing",
+      "typescript",
+    ],
+  },
   {
     name: "weather app",
     description:

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { AiOutlineTwitter, AiFillGithub } from "react-icons/ai"
 import { BsLinkedin, BsDiscord } from "react-icons/bs"
 import css from "../../src/assets/icons/css.png"
@@ -11,11 +11,13 @@ import javascriot from "../../src/assets/icons/javascript.png"
 import './Main.css'
 import { MdDownload } from "react-icons/md"
 import resume from '../assets/Resume.pdf'
+import { Link } from 'react-router-dom'
 
 
 function Main(prop) {
   const text_buttons = {
-    color: prop.light ? "black" : "white"
+    color: prop.light ? "black" : "white",
+    display: "flex"
   }
   return (
     <div className={`origin ${prop.minimize ? "translate-out-main " : "translate-in-main"}`}>
@@ -26,7 +28,7 @@ function Main(prop) {
           <div className='text-container'>
             <div className='text_intro'>
               <div className='names'>
-                <h1 style={text_buttons}>CHIDUBEM <span  className='surname'>OKAFOR (OC)</span></h1>
+                <h1 style={text_buttons}>CHIDUBEM <span  className='surname'> OKAFOR</span></h1>
               </div>
               <p className='main_text'>I am a web and blockchain developer, passionate about creating innovative digital solutions. With expertise in web development and blockchain technology.</p>
             </div>
@@ -53,8 +55,8 @@ function Main(prop) {
               <a href={resume} download="Resume.pdf">
                 <button className='down_btn'>Download cv <MdDownload className='MdDownload' /></button>
               </a>
-              <button>Hire me</button>
-              <button>Bye me a Coffee</button>
+              <button><Link className="link" to="/contact">Hire me</Link></button>
+             <button>Bye me a Coffee</button>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Portfolio.css';
 import { projects } from './projects.js';
 import { ImArrowUpRight2 } from 'react-icons/im';
